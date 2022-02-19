@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
-import {AppWrap} from '../../wrapper/wrapper'
+import { AppWrap } from '../../wrapper/wrapper';
 import { urlFor, client } from '../../client';
 
 import './About.scss';
@@ -18,10 +18,12 @@ const About = () => {
   }, []);
 
   return (
-    <>
+    <motion.div
+      whileInView={{ x: [-100, 0], opacity: [0, 1] }}
+      transition={{ duration: 1.0, delayChildren: 1.5 }}
+    >
       <h2 className='head-text'>
-        I Know That <span>Good Design </span>
-        means <span>Good Business</span>
+        About <span>Me</span>
       </h2>
 
       <div className='app__profiles'>
@@ -43,7 +45,7 @@ const About = () => {
           </motion.div>
         ))}
       </div>
-    </>
+    </motion.div>
   );
 };
 
