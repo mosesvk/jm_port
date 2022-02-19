@@ -17,23 +17,22 @@ const scaleVariants = {
 };
 
 const Header = () => (
-  <div className="app__header app__flex">
+  <div className='app__header app__flex'>
     <motion.div
       whileInView={{ x: [-100, 0], opacity: [0, 1] }}
-      transition={{ duration: 0.5 }}
-      className="app__header-info"
+      transition={{ duration: 0.5, delayChildren: 2.5 }}
+      className='app__header-info'
     >
-      <div className="app__header-badge">
-        <div className="badge-cmp app__flex">
-          <div style={{ marginLeft: 20 }}>
-            <h1 className="head-text">Moses Kaumatule</h1>
-          </div>
+      <div className='app__header-badge'>
+        <div>
+          <h1 className='header-h1'>MOSES KAUMATULE</h1>
+          <p className='header-p'>Software Engineer</p>
         </div>
 
-        <div className="tag-cmp app__flex">
+        {/* <div className="tag-cmp app__flex">
           <p className="p-text">Frontend Engineer</p>
           <p className="p-text">Freelancer</p>
-        </div>
+        </div> */}
       </div>
     </motion.div>
 
@@ -67,4 +66,4 @@ const Header = () => (
 );
 
 // export default AppWrap(Header, 'home');
-export default Header
+export default Header;
